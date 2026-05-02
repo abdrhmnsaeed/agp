@@ -1,0 +1,34 @@
+{
+  "name": "agp-system",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Agent Gateway Protocol for securing AI requests",
+  "main": "index.mjs",
+  "files": [
+    "bin",
+    "cli",
+    "gateway/agp-bouncer.dist.mjs",
+    "index.mjs"
+  ],
+  "bin": {
+    "agp-system": "./bin/agp.mjs"
+  },
+  "scripts": {
+    "test": "node agp-test.mjs",
+    "build": "javascript-obfuscator ./gateway/agp-bouncer.mjs --output ./gateway/agp-bouncer.dist.mjs --target node --string-array true --string-array-encoding base64",
+    "prepack": "npm run build"
+  },
+  "dependencies": {
+    "@google/genai": "^1.51.0",
+    "chalk": "^4.1.2",
+    "commander": "^14.0.3",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "glob": "^13.0.6",
+    "jsonwebtoken": "^9.0.3",
+    "node-fetch": "^3.3.2"
+  },
+  "devDependencies": {
+    "javascript-obfuscator": "^5.4.2"
+  }
+}

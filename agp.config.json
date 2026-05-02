@@ -1,0 +1,57 @@
+{
+  "target_base": "http://localhost:5000",
+  "mappings": {
+    "registerUser": {
+      "method": "POST",
+      "path": "/api/users/register"
+    },
+    "loginUser": {
+      "method": "POST",
+      "path": "/api/users/login"
+    },
+    "getUser": {
+      "method": "GET",
+      "path": "/api/users/:id"
+    },
+    "getUsers": {
+      "method": "GET",
+      "path": "/api/users/"
+    },
+    "changeAvatar": {
+      "method": "POST",
+      "path": "/api/users/change-avatar"
+    },
+    "editUser": {
+      "method": "PATCH",
+      "path": "/api/users/edit-user"
+    },
+    "createPost": {
+      "method": "POST",
+      "path": "/api/posts/"
+    },
+    "getPosts": {
+      "method": "GET",
+      "path": "/api/posts/"
+    },
+    "getPost": {
+      "method": "GET",
+      "path": "/api/posts/:id"
+    },
+    "getCatPosts": {
+      "method": "GET",
+      "path": "/api/posts/categories/:category"
+    },
+    "getUserPosts": {
+      "method": "GET",
+      "path": "/api/posts/users/:id"
+    },
+    "editPost": {
+      "method": "PATCH",
+      "path": "/api/posts/:id"
+    },
+    "deletePost": {
+      "method": "DELETE",
+      "path": "/api/posts/:id"
+    }
+  }
+}
